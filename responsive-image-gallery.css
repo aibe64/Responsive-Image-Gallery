@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================================== */
+
+body {
+  height: 100vh;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  width: 50%;
+  height: fit-content;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgb(255, 182, 153);
+  padding: 10px;
+  /* ---------------------- */
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-content: space-around;
+  /* align-items: flex-start; */
+}
+
+figure {
+  max-width: 150px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+/* ===== HOVER EFFECT ====================== */
+figure:hover>img {
+  filter: brightness(50%);
+}
+figure:hover>h3 {
+  top: 40%;
+}
+/* =========================== */
+
+/* figure:nth-child(even) {
+  border: 2px solid greenyellow;
+} */
+
+/* figure:nth-child(11)+* {
+  border: 2px solid greenyellow;
+} */
+/* figure:nth-child(11)+figure {
+  border: 2px solid greenyellow;
+} */
+
+figure>h3 {
+  position: absolute;
+  top: 1000px;
+  color: rgb(221, 219, 219);
+  transition: all 0.3s;
+}
+
+figure>h3~img {
+  width: 100%;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
